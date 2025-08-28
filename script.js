@@ -80,22 +80,22 @@ function getElement(id) {
 // });
 
 // // copy button start....
-// const copyButtons = document.getElementsByClassName("btn-copy");
+const copyButtons = document.getElementsByClassName("btn-copy");
 
-// for (let copybtn of copyButtons) {
-//   copybtn.addEventListener("click", function () {
-//     const serviceNumber = copybtn.parentNode.parentNode.children[2].innerText;
+for (let copybtn of copyButtons) {
+  copybtn.addEventListener("click", function () {
+    const serviceNumber = copybtn.parentNode.parentNode.children[2].innerText;
 
-//     alert(`নম্বর কপি হয়েছে : ${serviceNumber}`);
+    alert(`নম্বর কপি হয়েছে : ${serviceNumber}`);
 
-//     navigator.clipboard.writeText(serviceNumber);
+    navigator.clipboard.writeText(serviceNumber);
 
-//     const copy = getElement("total-copy").innerText;
-//     const currentCopy = Number(copy) + 1;
+    const copy = getElement("total-copy").innerText;
+    const currentCopy = Number(copy) + 1;
 
-//     getElement("total-copy").innerText = currentCopy;
-//   });
-// }
+    getElement("total-copy").innerText = currentCopy;
+  });
+}
 
 // heart button start.....
 const heartButtons = document.getElementsByClassName("btn-heart");
