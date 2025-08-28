@@ -29,49 +29,49 @@ function getElement(id) {
 }
 
 // service history start....
-// const callButtons = document.getElementsByClassName("btn-call");
+const callButtons = document.getElementsByClassName("btn-call");
 
-// for (let callbtns of callButtons) {
-//   callbtns.addEventListener("click", function () {
-//     const serviceTitle = callbtns.parentNode.parentNode.children[0].innerText;
+for (let callbtns of callButtons) {
+  callbtns.addEventListener("click", function () {
+    const serviceTitle = callbtns.parentNode.parentNode.children[0].innerText;
 
-//     const serviceDiscription =
-//       callbtns.parentNode.parentNode.children[1].innerText;
+    const serviceDiscription =
+      callbtns.parentNode.parentNode.children[1].innerText;
 
-//     const serviceNumber = callbtns.parentNode.parentNode.children[2].innerText;
+    const serviceNumber = callbtns.parentNode.parentNode.children[2].innerText;
 
-//     const amount = parseInt("20");
-//     const availableBlance = getInnerText("available-coin");
-//     const totalAvailableBlance = Number(availableBlance) - Number(amount);
+    const amount = parseInt("20");
+    const availableBlance = getInnerText("available-coin");
+    const totalAvailableBlance = Number(availableBlance) - Number(amount);
 
-//     if (amount <= availableBlance) {
-//       alert(`📞 Calling ${serviceDiscription} ${serviceNumber}.......`);
-//     }
+    if (amount <= availableBlance) {
+      alert(`📞 Calling ${serviceDiscription} ${serviceNumber}.......`);
+    }
 
-//     if (amount <= 0 || amount > availableBlance) {
-//       alert("❌ আপনার পর্যাপ্ত কয়েন নেই! কল করতে কমপক্ষে ২০ কয়েন লাগবে।");
-//       return;
-//     }
+    if (amount <= 0 || amount > availableBlance) {
+      alert("❌ আপনার পর্যাপ্ত কয়েন নেই! কল করতে কমপক্ষে ২০ কয়েন লাগবে।");
+      return;
+    }
 
-//     setInnerText(totalAvailableBlance);
+    setInnerText(totalAvailableBlance);
 
-//     const date = new Date().toLocaleTimeString();
+    const date = new Date().toLocaleTimeString();
 
-//     const historyContainer = getElement("history-container");
-//     const newCart = document.createElement("div");
-//     newCart.innerHTML = `
-//                 <div class="rounded-xl flex justify-between p-2">
-//                     <div>
-//                       <h3 class="font-bold text-[10] text-[#111111]">${serviceTitle}</h3>
-//                       <h5 class="font-semibold text-[#5c5c5c] text-sm">${serviceNumber}</h5>
-//                     </div>
-//                     <div><h2 class="mt-2">${date}</div>
-//                 </div>
-//     `;
+    const historyContainer = getElement("history-container");
+    const newCart = document.createElement("div");
+    newCart.innerHTML = `
+                <div class="rounded-xl flex justify-between p-2">
+                    <div>
+                      <h3 class="font-bold text-[10] text-[#111111]">${serviceTitle}</h3>
+                      <h5 class="font-semibold text-[#5c5c5c] text-sm">${serviceNumber}</h5>
+                    </div>
+                    <div><h2 class="mt-2">${date}</div>
+                </div>
+    `;
 
-//     historyContainer.append(newCart);
-//   });
-// }
+    historyContainer.append(newCart);
+  });
+}
 
 // button clear start....
 // document.getElementById("clear-btn").addEventListener("click", function () {
