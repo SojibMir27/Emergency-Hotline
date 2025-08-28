@@ -74,10 +74,10 @@ for (let callbtns of callButtons) {
 }
 
 // button clear start....
-// document.getElementById("clear-btn").addEventListener("click", function () {
-//   const historyContainer = getElement("history-container");
-//   historyContainer.innerHTML = "";
-// });
+document.getElementById("clear-btn").addEventListener("click", function () {
+  const historyContainer = getElement("history-container");
+  historyContainer.innerHTML = "";
+});
 
 // // copy button start....
 const copyButtons = document.getElementsByClassName("btn-copy");
